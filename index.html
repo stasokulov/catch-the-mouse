@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Catch the mouse</title>
+    <link rel='stylesheet' href='fonts.css'>
+    <link rel = 'stylesheet' href = 'style.css'>
+    
+</head>
+<body>
+    <main>
+        <div class = 'header'>
+            <div class = 'counter'>
+                <div class = 'counter__level-wrap'>
+                    <div class = 'counter__level animation-level'>
+                        1
+                    </div>
+
+                </div>
+
+                <div class = 'counter__points'>
+                    <div class = 'couter__points-success-wrap'>
+                        <div class = 'couter__points-success'>
+                            0
+                        </div>
+                        
+                    </div>
+                    <div class = 'couter__points-life'>
+                        <div class = 'couter__points-life-item heart_active'>
+                        </div>
+                        <div class = 'couter__points-life-item heart_active'>
+                        </div>
+                        <div class = 'couter__points-life-item heart_active'>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class = 'control'>
+                <button id = 'start' class = 'toggle-game'>
+                    Начать
+                </button>
+                <button id = 'stop' class = 'toggle-game invis'>
+                    Стоп
+                </button>
+                <a href="#rules">
+                    <button class = 'manual' href="#rules">
+                        ?
+                    </button>
+                </a>
+            </div>
+
+        </div>
+
+        <div class='hole' id = 'hole_1'>
+        </div>
+
+        <div class='hole' id = 'hole_2'> 
+        </div>
+
+        <div class='hole' id = 'hole_3'>
+        </div>
+
+        <div class='hole' id = 'hole_4'>
+                
+        </div>
+
+        <div class='hole' id = 'hole_5'>
+        </div>
+
+    </main>
+  
+<!--Модальные окна-->
+    
+    <div id = 'gameOver' class="modal_wrap">
+        <div class="modal">
+
+            <div class="modal__title">
+                ИГРА ЗАВЕРШЕНА
+            </div>
+
+            <div class="modal__message">
+                <div class="gameOver__message-begin">
+                    Поздравляем! Вы набрали:
+                </div>
+                <div class="gameOver__points">
+                    
+                </div>
+                <div class="gameOver__message-end">
+                    очков!
+                </div>
+            </div>
+
+            <a id = closeFinalModal href="#close" title="OK" >
+                <div class="modal__close">
+                    OK
+                </div>
+            </a>
+            <a id = 'goModalGameOver' href="#gameOver" title="Невидимая ссылка для клика по ней из JS, чтобы открыть модальное окно." ></a>
+            
+        </div>
+    </div>
+
+
+    <div id = 'rules' class="modal_wrap">
+        <div class="modal">
+
+            <div class="modal__title">
+                ПРАВИЛА ИГРЫ
+            </div>
+
+            <div class="modal__message">
+                <ol class = 'rulesList'>
+                    <li>В одной из 5-ти норок в случайном порядке периодически появляется мышь 🐭и другие emoji 🐭🐼🐻🦊🐱🐱...</li>
+                    <li>Нужно поймать мышь. При клике по мыши игроку добавляется +10 очков.</li>
+                    <li>После каждой пятой пойманной мыши скорость её случайного появления увеличивается.</li>
+                    <li>Если клик был выполнен по другому emoji, то у игрока отнимается жизнь. Всего 3 жизни. Если жизни закончились, то игра останавливается.</li>
+                </ol>
+                
+            </div>
+
+            <a href="#close" title="OK" >
+                <div class="modal__close">
+                    OK
+                </div>
+            </a>
+            
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
