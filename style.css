@@ -24,6 +24,7 @@ main {
     box-sizing: border-box;
     background-image: url(img/gameboard.svg);
     background-size: cover;
+    margin: auto;
 }
 
 @media (max-aspect-ratio: 1440/900) {
